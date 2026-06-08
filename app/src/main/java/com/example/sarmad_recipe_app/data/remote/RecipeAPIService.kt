@@ -14,7 +14,7 @@ import io.ktor.http.contentType
 
 class RecipeAPIService(private val client: HttpClient){
 
-    suspend fun getRecipes(): RecipeResponse {
+    suspend fun getAllRecipes(): RecipeResponse {
         return client.get("${KtorClient.BASE_URL}recipes").body()
     }
 
